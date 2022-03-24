@@ -38,6 +38,10 @@ def lambda_handler(event, context):
     search_results = []
     for keyword in keywords:
         #url = host+"/photos/_search?q="+"cat"
+        if keyword.endswith('s'):
+            end = len(keyword)-1
+            keyword = keyword[:end]
+        print("keyword: ", keyword)
         url = host+"/photos/_search?q="+keyword
         response = requests.get(url, auth=auth)
         response = response.json()
