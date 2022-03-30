@@ -8,7 +8,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 def lambda_handler(event, context):
-    
+    print("Hello!!!!!!!!!!!!!!!!!!!")
     print("event: ", event)
     print("context: ", context)
 
